@@ -1,6 +1,6 @@
 # Project 01 — Cluster foundation & baseline
 
-**Status:** In progress  
+**Status:** Complete  
 **Objective:** Create an auditable, resource-aware starting point for all subsequent K3s projects without disturbing existing workloads.
 
 ## Current baseline
