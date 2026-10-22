@@ -1,0 +1,29 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: namespace-observer
+  namespace: homelab
+  labels:
+    app.kubernetes.io/part-of: homelab-foundation
+rules:
+  - apiGroups: [""]
+    resources:
+      - configmaps
+      - events
+      - pods
+      - pods/log
+      - services
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - apps
+    resources:
+      - deployments
+      - replicasets
+      - statefulsets
+    verbs:
+      - get
+      - list
+      - watch
